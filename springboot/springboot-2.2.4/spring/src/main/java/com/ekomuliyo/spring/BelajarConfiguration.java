@@ -1,6 +1,7 @@
 package com.ekomuliyo.spring;
 
 import com.ekomuliyo.spring.model.DataBean;
+import com.ekomuliyo.spring.model.OtherBean;
 import com.ekomuliyo.spring.model.SampleBean;
 
 import org.springframework.beans.factory.annotation.Qualifier;
@@ -30,5 +31,11 @@ public class BelajarConfiguration {
     public SampleBean createSampleBean(@Qualifier("eko") DataBean dataBean){
         SampleBean sampleBean = new SampleBean(dataBean);
         return sampleBean;
+    }
+
+    @Bean
+    public OtherBean createOtherBean(@Qualifier("muliyo") DataBean dataBean, SampleBean sampleBean){
+        OtherBean otherBean = new OtherBean(dataBean, sampleBean);
+        return otherBean;
     }
 }
