@@ -3,16 +3,19 @@ package com.ekomuliyo.spring;
 import com.ekomuliyo.spring.model.DataBean;
 import com.ekomuliyo.spring.model.OtherBean;
 import com.ekomuliyo.spring.model.SampleBean;
+import com.ekomuliyo.spring.salah.SalahConfiguration;
 
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Import;
 import org.springframework.context.annotation.Primary;
 
 /**
  * BelajarConfiguration
  */
 @SpringBootApplication
+@Import(SalahConfiguration.class)
 public class BelajarConfiguration {
 
     @Bean(name = "eko")
