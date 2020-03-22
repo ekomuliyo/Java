@@ -1,4 +1,4 @@
-package com.ekomuliyo.java.kendaraan;
+package struktur.dasar.kendaraan;
 
 public class Kereta {
 	public static void jumlahBan() {

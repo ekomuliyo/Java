@@ -1,4 +1,4 @@
-package com.ekomuliyo.java.kendaraan;
+package struktur.dasar.kendaraan;
 
 public class Mobil {
 	public static void jumlahBan() {

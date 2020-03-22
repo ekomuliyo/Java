@@ -1,4 +1,4 @@
-package com.ekomuliyo.java.kendaraan;
+package struktur.dasar.kendaraan;
 
 public class Motor {
 	public static void jumlahBan() {

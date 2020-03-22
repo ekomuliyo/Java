@@ -1,4 +1,5 @@
-package com.ekomuliyo.java.music;
+package struktur.dasar.music;
+
 
 public class Gitar {
 	public static void bunyi() {
