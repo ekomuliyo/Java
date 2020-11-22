@@ -15,6 +15,7 @@ interface Car extends HasBrand, Maintenance {
     
     int getTier();
 
+    // default method in class interface
     default boolean isBig() {
         return false;
     }
