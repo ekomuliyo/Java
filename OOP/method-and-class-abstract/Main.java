@@ -16,7 +16,6 @@ abstract class Animal {
 
 class Cat extends Animal {
 
-    @Override
     public void run() {
         System.out.println("Cat name " + name + " is running.." );
     }
