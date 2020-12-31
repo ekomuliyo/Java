@@ -11,12 +11,15 @@ public class Main {
         } finally {
             System.out.println("Selalu dieksekusi");
         }
+
+        LoginRequest loginRequest2 = new LoginRequest(null, null);
+        ValidationUtil.validateRuntime(loginRequest2);
     }
 }
 
 class ValidationUtil {
     
-    static void validate(LoginRequest loginRequest) throws ValidationException {
+    static void validate(LoginRequest loginRequest) throws ValidationException, NullPointerException {
         if (loginRequest.username() == null) {
             throw new NullPointerException("Username is null");
         } else if (loginRequest.username().isBlank()) {
@@ -27,11 +30,29 @@ class ValidationUtil {
             throw new ValidationException("Password is blank");
         }
     }
+
+    static void validateRuntime(LoginRequest loginRequest){
+        if (loginRequest.username() == null) {
+            throw new NullPointerException("Username is null");
+        } else if (loginRequest.username().isBlank()) {
+            throw new BlankException("Username is blank");
+        } else if (loginRequest.password() == null) {
+            throw new NullPointerException("Password is null");
+        } else if (loginRequest.password().isBlank()) {
+            throw new BlankException("Password is blank");
+        }
+    }
 }
 
 class ValidationException extends Throwable {
     
     ValidationException(String message) {
+        super(message);
+    }
+}
+
+class BlankException extends RuntimeException {
+    public BlankException(String message) {
         super(message);
     }
 }
