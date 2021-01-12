@@ -14,8 +14,11 @@ public class Main {
         };
 
         Integer[] numbers2 = {
-            90, 10, 20, 30, 50
+            1, 3, 5, 7, 2, 10, 28, 17, 19
         };
+
+        // membandingkan array
+        System.out.println(Arrays.compare(numbers1, numbers2)); // 0 (array sama), 1 (array tidak sama)
 
         // mengurutkan ascending 
         Arrays.sort(numbers1);
@@ -33,7 +36,6 @@ public class Main {
         System.out.println(Arrays.toString(result2));
 
         System.out.println(Arrays.equals(numbers1, numbers2));
-
     }
     
 }
