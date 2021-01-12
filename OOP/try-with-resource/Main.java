@@ -5,7 +5,7 @@ public class Main {
     
     public static void main(String[] args) {
         
-        try(BufferedReader reader = new BufferedReader(new FileReader("README.md"))) {
+        try(BufferedReader reader = new BufferedReader(new FileReader("./try-with-resource/README.md"))) {
 
             while(true) {
                 String lineText = reader.readLine();
