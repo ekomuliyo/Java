@@ -7,6 +7,7 @@ public class Main {
         String[] names = {"Andi", "Budi", "Rudi"};
         Integer[] numbers = {1, 10, 2, 3, 4, 8};
 
+        System.out.println(ArrayHelper.<String>count(names)); // ArrayHelper.<String>(count), optional
         System.out.println(ArrayHelper.count(names));
         System.out.println(ArrayHelper.count(numbers));
 
