@@ -7,6 +7,8 @@ public class Main {
         Data<Manager> managerData = new Data<>(new Manager());
         Data<VicePresident> vicePresidentData = new Data<>(new VicePresident());
 
+        System.out.println(managerData);
+        System.out.println(vicePresidentData);
     }
 
     public static interface CanSayHello {
