@@ -37,6 +37,7 @@ public class Main {
         }
 
         Set<Gender> genders = EnumSet.allOf(Gender.class);
+        // Set<Gender> genders = EnumSet.of(Gender.MALE, Gender.FEMALE);
         System.out.println("----EnumSet----");
         for(var gender : genders) {
             System.out.println(gender);
