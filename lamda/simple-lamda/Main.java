@@ -6,18 +6,19 @@ public class Main {
         
         // cara biasa memanggil anonymous class 
         SimpleAction simpleAction = new SimpleAction(){
+
             @Override
-            public String action() {
-                return "Eko Muliyo";
+            public String action(String value) {
+                return value;
             }
         };
 
-        System.out.println(simpleAction.action());
+        System.out.println(simpleAction.action("Andi"));
         
         // memanggil anonymous class dengan lamda expression 
-        SimpleAction simpleAction2 = () -> "Palembang";
+        SimpleAction simpleAction2 = name ->  "Hello " + name;
 
-        System.out.println(simpleAction2.action());
+        System.out.println(simpleAction2.action("Budi"));
 
 
     }
@@ -27,5 +28,5 @@ public class Main {
 @FunctionalInterface
 interface SimpleAction {
 
-    String action();
+    String action(String value);
 }
