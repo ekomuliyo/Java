@@ -4,7 +4,7 @@ import java.util.function.Supplier;
 
 public class LazyApp {
     public static void main(String[] args) {
-        
+
         /**
          * Lazy adalah method yang di panggil jika hanya dibutuhkan
          */
